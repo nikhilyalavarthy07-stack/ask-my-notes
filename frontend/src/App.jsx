@@ -22,7 +22,7 @@ function App() {
     setAnswer("");
 
     try {
-      const response = await fetch(`${API_URL}/ask`, {
+      const response = await fetch(`https://backend-model-va2q.onrender.com/ask`, {
         method: "POST",
 
         headers: {
