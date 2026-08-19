@@ -6,7 +6,6 @@ function App() {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
   const askQuestion = async () => {
     const cleanedQuestion = question.trim();
@@ -22,7 +21,7 @@ function App() {
     setAnswer("");
 
     try {
-      const response = await fetch(`https://backend-model-va2q.onrender.com/ask`, {
+      const response = await fetch("https://askmynotes-01.onrender.com/ask", {
         method: "POST",
 
         headers: {
